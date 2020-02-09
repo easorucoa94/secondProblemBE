@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.truextend.secondProblem.entities.StudentAndClassesEntity;
 import com.truextend.secondProblem.entities.StudentEntity;
 import com.truextend.secondProblem.services.StudentService;
 import com.truextend.secondProblem.services.impl.StudentServiceImpl;
@@ -31,6 +32,12 @@ public class StudentController {
 	@PostMapping
 	public ResponseEntity<StudentEntity> save(@Valid @RequestBody StudentEntity studentEntity) {
 		return ResponseEntity.ok(studentService.save(studentEntity));
+	}
+
+	@PostMapping(path = "/attending")
+	public ResponseEntity<List<StudentEntity>> studentsInClasses(
+			@Valid @RequestBody StudentAndClassesEntity studentAndClassesEntity) {
+		return ResponseEntity.ok(studentService.filterStudentsInClasses(studentAndClassesEntity));
 	}
 
 }

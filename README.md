@@ -11,13 +11,32 @@ Intermediate Java Software Engineer
 **Phone Number**: +591 70060600
 
 ## Scope
+Having the following models:
+
+- **Student** =  { lStudentId, sStudentFirstName, sStudentLastName }
+
+- **Class** =  { lClassId, sClassCode, sClassTitle, sClassDescription }
+
+Develop a **REST API** to run the following operations:
+
+- Create/Edit/Delete Student.
+- Create/Edit/Delete Class.
+- Browse list of all Students.
+- Browse list of all Classes.
+- View all Students assigned to a Class.
+- View all Classes assigned to a Student.
+- Search Student/Classes by available fields/associations.
 
 ## Solution Details
 
 ## How to import this project
 
-## Project structure
+## Package distribution
+- **com.truextend.secondProblem**: Contains Spring Boot's main class, needed to run the application.
+- **com.truextend.secondProblem.controllers**: Contains all restControllers involved in this solution.
+- **com.truextend.secondProblem.entities**: Contains actors entities/models.
+- **com.truextend.secondProblem.services**: Contains the Service layer and its implementations **(~ServiceImpl.java)**
+- **com.truextend.secondProblem.utils**: Contains the application utils. Methods that can be re-used in order to execute certain actions, not specific but general ones.
 
-## Database connection details
 
 ## Application endpoints

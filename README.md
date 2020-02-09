@@ -29,8 +29,6 @@ This solution was built using Spring Boot and packed with Maven.
 
 Database connection to a MySQL5.7 DataBase
 
-## How to import this project
-
 ## Package distribution
 - **com.truextend.secondProblem**: Contains Spring Boot's main class, needed to run the application.
 - **com.truextend.secondProblem.controllers**: Contains all restControllers involved in this solution.

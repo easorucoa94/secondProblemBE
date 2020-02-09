@@ -13,19 +13,15 @@ Intermediate Java Software Engineer
 ## Scope
 Having the following models:
 
-- **Student** =  { lStudentId, sStudentFirstName, sStudentLastName }
+- **Student** =  { sStudentName, dStudentLatitude, dStudentLongitude }
 
-- **Class** =  { lClassId, sClassCode, sClassTitle, sClassDescription }
+- **Class** =  { sClassName, dClassLatitude, dClassLongitude }
+
+- **StudentAndClasses (Model that shows students and classes)** =  { studentList, classList }
 
 Develop a **REST API** to run the following operations:
 
-- Create/Edit/Delete Student.
-- Create/Edit/Delete Class.
-- Browse list of all Students.
-- Browse list of all Classes.
-- View all Students assigned to a Class.
-- View all Classes assigned to a Student.
-- Search Student/Classes by available fields/associations.
+- Determine which students are physically in any classroom, based on both students and classes' latitude and longitude coordinates.
 
 ## Solution Details
 

@@ -15,6 +15,6 @@ public interface StudentService {
 	public StudentEntity save(StudentEntity studentEntity);
 
 	public List<StudentEntity> filterStudentsInClasses(StudentAndClassesEntity studentAndClassesEntity);
-	
+
 	public List<ClassEntity> getStudentAttendingClasses(StudentEntity studentEntity, List<ClassEntity> classList);
 }

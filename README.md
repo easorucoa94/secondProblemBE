@@ -36,3 +36,182 @@ Develop a **REST API** to run the following operations:
 
 
 ## Application endpoints
+### http://{SERVER_URL}:{SERVER_PORT}/student
+- **Path**: / (GET REQUEST) --- List all students
+
+**Body**: none
+
+**Reponse**: Collection of StudentEntity
+```
+[
+    {
+        "sStudentName": "John Wilson",
+        "dStudentLatitude": 34.069149,
+        "dStudentLongitude": -118.442639
+    },
+    {
+        "sStudentName": "Jane Graham",
+        "dStudentLatitude": 34.069601,
+        "dStudentLongitude": -118.441862
+    },
+    {
+        "sStudentName": "Pam Bam",
+        "dStudentLatitude": 34.071513,
+        "dStudentLongitude": -118.441181
+    }
+]
+```
+
+- **Path**: / (POST REQUEST) --- Register / Insert a new Student
+
+**Body**: StudentEntity Object
+```
+{
+    "sStudentName": "John Wilson",
+    "dStudentLatitude": 34.069149,
+    "dStudentLongitude": -118.442639
+}
+```
+
+**Reponse**: StudentEntity Object
+```
+{
+    "sStudentName": "John Wilson",
+    "dStudentLatitude": 34.069149,
+    "dStudentLongitude": -118.442639
+}
+```
+
+- **Path**: /attending (POST REQUEST) --- Checks students physically in their classrooms by lat and long
+
+**Body**: StudentAndClassesEntity Object
+```
+{
+    "studentList": [
+        {
+            "sStudentName": "John Wilson",
+            "dStudentLatitude": 34.069849,
+            "dStudentLongitude": -118.443539
+        },
+        {
+            "sStudentName": "Jane Graham",
+            "dStudentLatitude": 34.069901,
+            "dStudentLongitude": -118.441562
+        },
+        {
+            "sStudentName": "Pam Bam",
+            "dStudentLatitude": 34.071523,
+            "dStudentLongitude": -118.441171
+        }
+    ],
+    "classList": [
+        {
+            "sClassName": "Principles of computational geo-location analysis",
+            "dClassLatitude": 34.06914,
+            "dClassLongitude": -118.442689
+        },
+        {
+            "sClassName": "Sedimentary Petrology",
+            "dClassLatitude": 34.069585,
+            "dClassLongitude": -118.441878
+        },
+        {
+            "sClassName": "Introductory Psychobiology",
+            "dClassLatitude": 34.069742,
+            "dClassLongitude": -118.441312
+        },
+        {
+            "sClassName": "Art of Listening",
+            "dClassLatitude": 34.070223,
+            "dClassLongitude": -118.440193
+        },
+        {
+            "sClassName": "Art Hitory",
+            "dClassLatitude": 34.071528,
+            "dClassLongitude": -118.441211
+        }
+    ]
+}
+```
+
+**Reponse**: Collection of StudentEntity Object
+```
+[
+    {
+        "sStudentName": "Pam Bam",
+        "dStudentLatitude": 34.071523,
+        "dStudentLongitude": -118.441171
+    }
+]
+```
+
+### http://{SERVER_URL}:{SERVER_PORT}/class
+- **Path**: / (GET REQUEST) --- List all classes
+
+**Body**: none
+
+**Reponse**: Collection of ClassEntity
+```
+[
+    {
+        "sClassName": "Principles of computational geo-location analysis",
+        "dClassLatitude": 34.06914,
+        "dClassLongitude": -118.442689
+    },
+    {
+        "sClassName": "Sedimentary Petrology",
+        "dClassLatitude": 34.069585,
+        "dClassLongitude": -118.441878
+    },
+    {
+        "sClassName": "Introductory Psychobiology",
+        "dClassLatitude": 34.069742,
+        "dClassLongitude": -118.441312
+    },
+    {
+        "sClassName": "Art of Listening",
+        "dClassLatitude": 34.070223,
+        "dClassLongitude": -118.440193
+    },
+    {
+        "sClassName": "Art Hitory",
+        "dClassLatitude": 34.071528,
+        "dClassLongitude": -118.441211
+    }
+]
+```
+
+- **Path**: / (POST REQUEST) --- Register / Insert a new Class
+
+**Body**: ClassEntity Object
+```
+{
+    "sClassName": "Art Hitory",
+    "dClassLatitude": 34.071528,
+    "dClassLongitude": -118.441211
+}
+```
+
+**Reponse**: ClassEntity Object
+```
+{
+    "sClassName": "Art Hitory",
+    "dClassLatitude": 34.071528,
+    "dClassLongitude": -118.441211
+}
+```
+
+
+**Reponse**: Collection of ClassEntity Object
+```
+[
+    {
+        "studentsInClass": [],
+        "classFilteredStudents": null,
+        "lclassId": 5,
+        "sclassCode": "MAT-101",
+        "sclassTitle": "Maths",
+        "sclassDescription": "Learn maths"
+    }
+]
+```

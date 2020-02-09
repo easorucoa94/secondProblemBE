@@ -3,15 +3,15 @@ package com.truextend.secondProblem.entities;
 public class StudentEntity {
 
 	private String sStudentName;
-	private Double dStudentLattitude;
+	private Double dStudentLatitude;
 	private Double dStudentLongitude;
 
 	protected StudentEntity() {
 	}
 
-	public StudentEntity(String sStudentName, Double dStudentLattitude, Double dStudentLongitude) {
+	public StudentEntity(String sStudentName, Double dStudentLatitude, Double dStudentLongitude) {
 		this.sStudentName = sStudentName;
-		this.dStudentLattitude = dStudentLattitude;
+		this.dStudentLatitude = dStudentLatitude;
 		this.dStudentLongitude = dStudentLongitude;
 	}
 
@@ -23,12 +23,12 @@ public class StudentEntity {
 		this.sStudentName = sStudentName;
 	}
 
-	public Double getdStudentLattitude() {
-		return dStudentLattitude;
+	public Double getdStudentLatitude() {
+		return dStudentLatitude;
 	}
 
-	public void setdStudentLattitude(Double dStudentLattitude) {
-		this.dStudentLattitude = dStudentLattitude;
+	public void setdStudentLatitude(Double dStudentLatitude) {
+		this.dStudentLatitude = dStudentLatitude;
 	}
 
 	public Double getdStudentLongitude() {

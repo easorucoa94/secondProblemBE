@@ -200,18 +200,3 @@ Develop a **REST API** to run the following operations:
     "dClassLongitude": -118.441211
 }
 ```
-
-
-**Reponse**: Collection of ClassEntity Object
-```
-[
-    {
-        "studentsInClass": [],
-        "classFilteredStudents": null,
-        "lclassId": 5,
-        "sclassCode": "MAT-101",
-        "sclassTitle": "Maths",
-        "sclassDescription": "Learn maths"
-    }
-]
-```
